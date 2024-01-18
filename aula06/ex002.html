@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            font: 20px;
+        }
+
+        h1{
+            color: blue;
+        }
+
+        div#area {
+            font: 20pt arial;
+            background-color: brown;
+            color: blanchedalmond;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>ola mundo</h1>
+    
+    <div id="area" onclick="clicar()" onmouseenter="entrou()" onmouseleave="saiu()">
+        clique aqui!
+    </div>
+
+    <script>
+        var nome = window.prompt('qual o seu nome?')
+        window.alert('ola ' + nome)
+
+        var n1 = Number(window.prompt('digite um numero'))
+        var n2 = Number(window.prompt('digite um segundo numero'))
+
+        var soma = n1 + n2
+
+        window.alert('a soma dos numeros é ' + String(soma))
+
+
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar(){
+            a.innerText = 'clicou:'
+            a.style.background = 'blue'
+            
+        }
+        function entrar(){
+            a.innerText = 'entrou'
+        }
+        function sair(){
+            a.innerText = 'saiu'
+            a.style.background = 'brown'
+        }
+    </script>
+</body>
+</html>

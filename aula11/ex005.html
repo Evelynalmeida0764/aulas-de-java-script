@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>distinção</title>
+</head>
+<body>
+    <h1>nacional ou estrangeiro</h1>
+    Nacionalidade: <input type="text" id="txtnascio">
+    <input type="button" value="Verificar" onclick="Verificar()">
+    <div id = "res">
+
+    </div>
+    <script>
+        function Verificar(){
+            var txtnas = window.document.getElementById('txtnascio').value
+            res = window.document.querySelector('div#res')
+            res.innerHTML = `<p>Sua nascionalidade é <strong>${txtnas}</strong></p>`
+            if(txtnas != 'brasileiro'){
+                res.innerHTML += `Voce é <strong>ESTRANGEIRO</strong>`
+            }
+            else {
+                res.innerHTML += `Voce é <strong>BRAZUCA</strong>`
+            }
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+        }
+    </script>
+</body>
+</html>
